@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Initialize
+DEVILBOX_DIR=$(dirname $0);
+
+cd $DEVILBOX_DIR || (echo "ERROR: Could not change directory to $DEVILBOX_DIR!"; exit 1);
+
+# Check if the container is running
+result=$(docker ps -q -f name=devilbox-ocelot_php_1)
+
+if [ -z $result ]
+then
+  # It's not running, so exit here
+  exit 0;
+fi
+
+# Example project site entry - replace {project_name} with actual project name
+# /usr/local/bin/docker-compose exec -T --user devilbox php php -f /shared/httpd/{project_name}/script.php;

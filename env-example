@@ -96,7 +96,7 @@ LOCAL_LISTEN_ADDR=
 ###   TLD_SUFFIX=local
 ### Makes your project available under xxxx.local
 ###
-TLD_SUFFIX=loc
+TLD_SUFFIX=local
 
 
 ###
@@ -137,7 +137,7 @@ NEW_GID=1000
 ###
 ### Timezone for PHP Docker container (system and php.ini)
 ###
-TIMEZONE=UTC
+TIMEZONE=Europe/Ljubljana
 
 
 
@@ -289,9 +289,9 @@ HTTPD_SERVER=nginx-stable
 #MYSQL_SERVER=mariadb-10.0
 #MYSQL_SERVER=mariadb-10.1
 #MYSQL_SERVER=mariadb-10.2
-#MYSQL_SERVER=mariadb-10.3
+MYSQL_SERVER=mariadb-10.3
 #MYSQL_SERVER=mariadb-10.4
-MYSQL_SERVER=mariadb-10.5
+#MYSQL_SERVER=mariadb-10.5
 #MYSQL_SERVER=percona-5.5
 #MYSQL_SERVER=percona-5.6
 #MYSQL_SERVER=percona-5.7
@@ -451,7 +451,7 @@ MONGO_SERVER=4.4
 ###
 ### MOUNT_OPTIONS=,z
 ###
-MOUNT_OPTIONS=
+MOUNT_OPTIONS=,z
 
 
 ###
@@ -579,7 +579,7 @@ HTTPD_VHOST_SSL_TYPE=both
 ###
 ### When changing this value, restart the devilbox.
 ###
-HTTPD_DOCROOT_DIR=htdocs
+HTTPD_DOCROOT_DIR=public
 
 
 ###
